@@ -1248,6 +1248,7 @@ div.boardlist {
   margin-top: 3px;
   color: #89A;
   font-size: 9pt;
+  text-align: center;
 }
 
 div.boardlist.bottom {
