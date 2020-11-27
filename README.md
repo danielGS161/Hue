@@ -1,4 +1,4 @@
-Bazukinha - A lightweight and full featured PHP imageboard.
+Bazukachan - A lightweight and full featured PHP imageboard.
 ========================================================
 
 About
@@ -15,6 +15,7 @@ Vichan is still accepting patches, but there is at the moment no active developm
 
 History
 ------------
+
 vichan is a fork of (now defunc'd) [Tinyboard](http://github.com/savetheinternet/Tinyboard),
 a great imageboard package, actively building on it and adding a lot of features and other
 improvements.
@@ -41,7 +42,7 @@ We try to make sure vichan is compatible with all major web servers. vichan does
 
 Contributing
 ------------
-You can contribute to Bazukinha by:
+You can contribute to Bazukachan by:
 *	Developing patches/improvements/translations and using GitHub to submit pull requests
 *	Providing feedback and suggestions
 *	Writing/editing documentation
@@ -66,7 +67,7 @@ To migrate from a Kusaba X board, use http://github.com/vichan-devel/Tinyboard-M
 Support
 --------
 
-As it stands Bazukinha has no public support system.
+As it stands Bazukachan has no public support system.
 
 ### vichan support
 vichan is still beta software -- there are bound to be bugs. If you find a
@@ -84,7 +85,7 @@ at the power users. You won't be able to run these from shared hosting accounts
 
 Oekaki
 ------
-Bazukinha makes use of [wPaint](https://github.com/websanova/wPaint) for oekaki.
+Bazukachan makes use of [wPaint](https://github.com/websanova/wPaint) for oekaki.
 
 To enable oekaki, add all the scripts listed in `js/wpaint.js` to your `instance-config.php`.
 
@@ -92,9 +93,9 @@ WebM support
 ------------
 Read `inc/lib/webm/README.md` for information about enabling webm.
 
-Bazukinha API
+bazukachan API
 ----------
-Bazukinha provides by default a 4chan-compatible JSON API. For documentation on this, see:
+Bazukachan provides by default a 4chan-compatible JSON API. For documentation on this, see:
 https://github.com/vichan-devel/vichan-API/ .
 
 License
