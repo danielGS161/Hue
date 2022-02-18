@@ -1,0 +1,90 @@
+/**
+  * iwakura.css
+  * by borkform2555
+  * copied from https://gitgud.io/fatchan/jschan/-/raw/master/gulp/res/css/themes/iwakura.css
+  */
+
+body {
+	background: url("img/iwakura-bg.gif"), #6d99BA50;
+	color: #dcdcdc;
+}
+
+hr {
+	color: #d2738a;
+}
+
+.intro span.subject {
+	color: #f4c095;
+}
+
+input[type=text], textarea, input[type=password] {
+	background-color: #282a2e;
+	color: #dcdcdc;
+	border-color: #d2738a;
+}
+
+input[type=text]:focus, textarea:focus {
+	border-color: #d2738a;
+}
+
+form table tr th {
+	background: #282a2e;
+	border-color: #d2738a;
+}
+
+h1 {
+  color: #f4c095;
+}
+
+a:link, a:visited, .intro a.email span.name {
+	color: #6d98ba;
+}
+a:hover {
+	color: #800;
+}
+div.post.reply {
+	background: #222222;
+	border-color: #d2738a;
+}
+div.post.reply.highlighted {
+	background: #6d99ba73;
+	border-color: #82cece;
+}
+
+div.pages {
+	background: #222222eb;
+	border-color: #d2738a;
+}
+div.pages a.selected {
+	color: #6d98ba;
+	font-weight: bold;
+}
+
+div.report {
+	color: #dcdcdc;
+}
+
+div.ban h2 {
+	background: #282A2E;
+	color: inherit;
+}
+div.ban {
+	border-color: #800;
+	background-color: transparent;
+}
+div.ban p {
+	color: #dcdcdc;
+}
+
+.intro span.name {
+	color: #d2738a;
+	font-weight: bold;
+}
+
+span.mentioned.unimportant a {
+	color: #f4c095;
+}
+
+span.mentioned.unimportant a:hover {
+	color: #800;
+}
