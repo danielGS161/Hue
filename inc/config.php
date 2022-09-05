@@ -1386,7 +1386,7 @@ $config['nicenotice_reasons'][] = "We care, and we hope you feel better soon. We
 	// It's very important that you match the entire input (with ^ and $) or things will not work correctly.
 	$config['embedding'] = array(
 		array(
-			'/^https?:\/\/(?:\w+\.|)(?:youtu\.be\/|(?:youtube\.com\/|hooktube\.com\/)(?:embed\/|watch\?v=|watch\?v=))([a-zA-Z0-9\-_]{10,11})(&.+)?$/i',
+			'/^https?:\/\/(?:\w+\.|)(?:youtu\.be\/|(?:youtube\.com\/|hooktube\.com\/)(?:embed\/|watch\?v=|watch\?v=))([a-zA-Z0-9\-_]{10,11})?$/i',
 			'<div class="video-container" data-video="$1">'.
 			'<span class="unimportant yt-help">YouTube embed. Click thumbnail to play.</span><br>'.
 			'<a href="$0" target="_blank" class="file">'.
@@ -1410,11 +1410,11 @@ $config['nicenotice_reasons'][] = "We care, and we hope you feel better soon. We
 			'<embed src="http://video.google.com/googleplayer.swf?docid=$1&hl=en&fs=true" style="width:%%tb_width%%px;height:%%tb_height%%px;float:left;margin:10px 20px" allowFullScreen="true" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>'
 		),
 		array(
-			'/^https?:\/\/(\w+\.|)(vocaroo\.com\/|voca\.ro\/)([a-zA-Z0-9]{2,15})(&.+)?$/i',
+			'/^https?:\/\/(\w+\.|)(vocaroo\.com\/|voca\.ro\/)([a-zA-Z0-9]{2,15})?$/i',
 			'<iframe width="300" height="60" src="https://vocaroo.com/embed/$3?autoplay=0" frameborder="0" allow="autoplay"></iframe>'
 		),
 		array(
-			'/^https?:\/\/(\w+\.)?bitchute\.com\/video\/([^\s?&#\/]+)\/(&.+)?$/i',
+			'/^https?:\/\/(\w+\.)?bitchute\.com\/video\/([^\s?&#\/]+)\/?$/i',
 			'<iframe width="%%tb_width%%" height="%%tb_height%%" scrolling="no" frameborder="0" style="border: none;" src="https://www.bitchute.com/embed/$2"></iframe>'
 		)
 	);
