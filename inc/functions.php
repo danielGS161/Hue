@@ -3833,7 +3833,7 @@ function validate_ip_string($ip)
 	if (!$config['bcrypt_ip_addresses'] && filter_var($ip, FILTER_VALIDATE_IP) === false)
 		return false;
 	// else if ($config['bcrypt_ip_addresses'] && !ctype_alnum($ip) && strlen($ip) != 53)
-	else if ($config['bcrypt_ip_addresses'] && preg_match("/[._0-9A-Za-z]{31}/", $ip) != 1)
+	else if ($config['bcrypt_ip_addresses'] && preg_match("/\b[._0-9A-Za-z]{31}\b/", $ip) != 1)
 		return false;
 	
 	return true;
