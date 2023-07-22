@@ -1659,7 +1659,7 @@ function mod_move_reply($originBoard, $postID) {
 		// trigger themes
 		rebuildThemes('post', $targetBoard);
 		// mod log
-		modLog("Moved post #${postID} to " . sprintf($config['board_abbreviation'], $targetBoard) . " (#${newID})", $originBoard);
+		modLog("Moved post #{$postID} to " . sprintf($config['board_abbreviation'], $targetBoard) . " (#{$newID})", $originBoard);
 		
 		// return to original board
 		openBoard($originBoard);
@@ -1878,7 +1878,7 @@ function mod_move($originBoard, $postID) {
 			}
 		}
 		
-		modLog("Moved thread #${postID} to " . sprintf($config['board_abbreviation'], $targetBoard) . " (#${newID})", $originBoard);
+		modLog("Moved thread #{$postID} to " . sprintf($config['board_abbreviation'], $targetBoard) . " (#{$newID})", $originBoard);
 		
 		// build new thread
 		buildThread($newID);
