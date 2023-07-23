@@ -9,29 +9,7 @@ if (realpath($_SERVER['SCRIPT_FILENAME']) == str_replace('\\', '/', __FILE__)) {
 	exit;
 }
 
-define('TINYBOARD', null);
-
 $microtime_start = microtime(true);
-
-require_once 'inc/display.php';
-require_once 'inc/template.php';
-require_once 'inc/database.php';
-require_once 'inc/events.php';
-require_once 'inc/api.php';
-require_once 'inc/mod/auth.php';
-require_once 'inc/lock.php';
-require_once 'inc/queue.php';
-require_once 'inc/polyfill.php';
-require_once 'inc/announcements.php';
-require_once 'inc/archive.php';
-require_once 'inc/shadow-delete.php';
-require_once 'inc/mod/statistics.php';
-@include_once 'inc/lib/parsedown/Parsedown.php'; // fail silently, this isn't a critical piece of code
-
-if (!extension_loaded('gettext')) {
-	require_once 'inc/lib/gettext/gettext.inc';
-}
-
 // the user is not currently logged in as a moderator
 $mod = false;
 
@@ -64,7 +42,7 @@ function init_locale($locale, $error='error') {
 		bind_textdomain_codeset('tinyboard', 'UTF-8');
 		textdomain('tinyboard');
 	} else {
-		if (_setlocale(LC_ALL, $locale) === false) {
+		if (setlocale(LC_ALL, $locale) === false) {
 			$error('The specified locale (' . $locale . ') does not exist on your platform!');
 		}
 		_bindtextdomain('tinyboard', './inc/locale');

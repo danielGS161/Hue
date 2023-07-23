@@ -3,9 +3,7 @@
  *  Copyright (c) 2010-2014 Tinyboard Development Group
  */
 
-require_once 'inc/functions.php';
-require_once 'inc/anti-bot.php';
-require_once 'inc/bans.php';
+require_once 'inc/bootstrap.php';
 
 if ((!isset($_POST['mod']) || !$_POST['mod']) && $config['board_locked']) {
     error("Board is locked");

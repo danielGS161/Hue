@@ -5,30 +5,26 @@
  */
 
 defined('TINYBOARD') or exit;
+require_once 'inc/bootstrap.php';
 
 $twig = false;
 
 function load_twig() {
 	global $twig, $config;
-	
-	require 'lib/Twig/Autoloader.php';
-	Twig_Autoloader::register();
 
-	Twig_Autoloader::autoload('Twig_Extensions_Node_Trans');
-	Twig_Autoloader::autoload('Twig_Extensions_TokenParser_Trans');
-	Twig_Autoloader::autoload('Twig_Extensions_Extension_I18n');
-	Twig_Autoloader::autoload('Twig_Extensions_Extension_Tinyboard');
-	
-	$loader = new Twig_Loader_Filesystem($config['dir']['template']);
+	$loader = new Twig\Loader\FilesystemLoader($config['dir']['template']);
 	$loader->setPaths($config['dir']['template']);
-	$twig = new Twig_Environment($loader, array(
+	$twig = new Twig\Environment($loader, array(
 		'autoescape' => false,
 		'cache' => is_writable('templates') || (is_dir('templates/cache') && is_writable('templates/cache')) ?
-			"{$config['dir']['template']}/cache" : false,
-		'debug' => $config['debug']
+			new Twig_Cache_TinyboardFilesystem("{$config['dir']['template']}/cache") : false,
+		'debug' => $config['debug'],
+		'auto_reload' => $config['twig_auto_reload']
 	));
-	$twig->addExtension(new Twig_Extensions_Extension_Tinyboard());
-	$twig->addExtension(new Twig_Extensions_Extension_I18n());
+	if ($config['debug'])
+		$twig->addExtension(new \Twig\Extension\DebugExtension());
+	$twig->addExtension(new Tinyboard());
+	$twig->addExtension(new PhpMyAdmin\Twig\Extensions\I18nExtension());
 }
 
 function Element($templateFile, array $options) {

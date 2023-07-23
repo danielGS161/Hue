@@ -1,5 +1,5 @@
 <?php
-include "inc/functions.php";
+require 'inc/bootstrap.php';
 include "inc/captcha/functions.php";
 $global = isset($_GET['global']);
 $post = (isset($_GET['post']) ? $_GET['post'] : false);
