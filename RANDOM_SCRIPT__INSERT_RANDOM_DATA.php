@@ -4,7 +4,7 @@
 
 // require 'inc/config.php';
 // require 'inc/config_instance.php';
-require 'inc/functions.php';
+require 'inc/bootstrap.php';
 
 
 global $config, $pdo;

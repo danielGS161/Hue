@@ -2,7 +2,7 @@
 
 // Installation/upgrade file
 define('VERSION', '2.0.0');
-require 'inc/functions.php';
+require 'inc/bootstrap.php';
 loadConfig();
 
 // Salt generators
