@@ -73,3 +73,6 @@ favicon.ico
 # Images from twemoji
 js/twemoji/16x16/
 /.vs
+
+# composer
+vendor/
